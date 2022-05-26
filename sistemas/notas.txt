@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% if id_ibro %}
+        {% set id_libro = id_libro %}
+    {% else %}
+        {% set id_libro = "Nuevo libro" %}
+    {% endif %}
+<head>
+    <title>Ver libro{{id_libro}}</title>
+</head>
+<body>
+    <h1>Formulario Libro {{id_libro}} </h1>
+</body>
+</html>
+
+----------------- rutas 
+
+@app.route('/hola/')
+@app.route('/hola/<name>')
+def hello(name=None):
+    url_for('static',filename='style.css')
+    return render_template('hello.html', name=name)
+
+@app.route('/')
+def hola_mundo():
+    url_for('static',filename='style.css')
+    return 'Hola, Clase de desarrollo de sistemas Multimediales'
+
+@app.route('/libros/')
+@app.route('/libros/<libros>')
+def libros(libros=None):
+    url_for('static',filename='style.css')
+    return render_template('libros.html', libros=libros)
+
+@app.route('/libros/mision/')
+def mision():
+    url_for('static',filename='style.css')
+    return render_template('libros/mision.html')
+
+@app.route('/libros/vision/')
+def vision():
+    url_for('static',filename='style.css')
+    return render_template('libros/vision.html')
+
+@app.route('/libros/nosotros/')
+def nosotros():
+    url_for('static',filename='style.css')
+    return render_template('libros/nosotros.html')
+
+@app.route('/libros/cienAñosdeSoledad/')
+def cienAñosdeSolead():
+    url_for('static',filename='style.css')
+    return render_template('libros/cienAñosdeSoledad.html')
+
+@app.route('/libros/librocoronel/')
+def librocoronel():
+    url_for('static',filename='style.css')
+    return render_template('libros/librocoronel.html')
+
+@app.route('/libros/libroanaFrank/')
+def libroanaFrank():
+    url_for('static',filename='style.css')
+    return render_template('libros/libroanaFrank.html')
+
+@app.route('/libros/libroodisea/')
+def libroodisea():
+    url_for('static',filename='style.css')
+    return render_template('libros/libroodisea.html')
+
+@app.route('/libros/LibroDiariodeunLoco/')
+def LibroDiariodeunLoco():
+    url_for('static',filename='style.css')
+    return render_template('libros/LibroDiariodeunLoco.html')

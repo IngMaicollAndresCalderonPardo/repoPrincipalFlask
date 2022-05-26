@@ -1,0 +1,15 @@
+{% extends "index2.html" %}
+
+{% if id_libro %}
+    {% set id_libro=id_libro %}
+{% else %}
+    {% set id_libro="nuevo libro" %}
+{% endif %}
+
+{% block titulo %} 
+    Formulario: {{id_libro}}
+{% endblock %}
+
+{% block contenido %}
+    Mostrando el Formulario {{id_libro}}
+{% endblock %}
